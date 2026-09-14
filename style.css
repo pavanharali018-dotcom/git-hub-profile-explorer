@@ -39,7 +39,12 @@ body{
     font-size: 16px;
     cursor: pointer;
 }
-
+#search-btn:hover{
+    background-color:#1d4ed8;
+}
+#profile-link:hover{
+    background-color:#374151;
+}
 #profile-container {
     max-width: 500px;
     margin: 40px auto;
@@ -87,4 +92,14 @@ body{
 .stat-value {
     font-size: 20px;
     font-weight: bold;
+}
+#profile-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
 }
