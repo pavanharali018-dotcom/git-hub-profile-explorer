@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitHub Profile Explorer</title>
 </head>
 <body>
      <header>
@@ -13,10 +13,33 @@
     </header>
     <section class="search-section">
         <form id="search-form">
-            <input type="text" placeholder="Enter GitHub username" id="search-form" >
+            <input type="text" placeholder="Enter GitHub username" id="username-input" >
             <button type="submit" id="search-btn">Search</button>
 
         </form>
+    </section>
+    <section class="profile-section" id="profile-container">
+        <img id="profile-avatar" alt="GitHub profile picture">
+        <h2 id="profile-name">User Name</h2>
+        <p id="profile-bio">User bio will appear here</p>
+
+        <div class="profile-stats">
+            <div class="stat">
+                <span class="stat-label">Repositories</span>
+                 <span class="stat-value">0 </span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Followers </span>
+                 <span class="stat-value">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Following </span>
+                 <span class="stat-value">0</span>
+            </div>
+           
+        </div>
+         <a id="profile-link" href="#" target="_blank">View GitHub Profile</a>
+
     </section>
 </body>
 </html>
