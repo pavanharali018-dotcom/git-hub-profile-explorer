@@ -7,7 +7,7 @@ let profileBio =document.querySelector("#profile-bio");
 let profileLink =document.querySelector("#profile-link");
 let selector=document.querySelectorAll(".stat-value")
 
-searchForm.addEventListener(submit,(event)=>{
+searchForm.addEventListener("submit",(event)=>{
  event.preventDefault();
  const username =usernameInput.value;
  if(username.length===0){
@@ -28,6 +28,7 @@ searchForm.addEventListener(submit,(event)=>{
      }
      
   }
+  getusername();
 
 });
 
