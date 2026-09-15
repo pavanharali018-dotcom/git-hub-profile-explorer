@@ -13,4 +13,21 @@ searchForm.addEventListener(submit,(event)=>{
  if(username.length===0){
     return ;
  }
+ let apiUrl = `https://api.github.com/users/${username}`;
+  async function getusername(){
+     try{
+        const gitusername = await fetch(apiUrl);
+        if(!gitusername.ok){
+            throw new Error(`Status:${gitusername.status}`);
+        }
+        const data = await gitusername.json();
+        console.log(data);
+     }
+     catch(error){
+        console.log("failed to fetch username",error);
+     }
+     
+  }
+
 });
+
