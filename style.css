@@ -46,6 +46,8 @@ body{
     background-color:#374151;
 }
 #profile-container {
+    /* pushing tonight. */
+    display:none;
     max-width: 500px;
     margin: 40px auto;
     padding: 30px;
@@ -102,4 +104,10 @@ body{
     text-decoration: none;
     border-radius: 8px;
     font-size: 15px;
+}
+#error-message {
+    color: #dc2626;
+    text-align: center;
+    margin-top: 20px;
+    display:"none";
 }
