@@ -49,13 +49,21 @@ searchForm.addEventListener("submit",(event)=>{
         searchButton.disabled = false;
         const reposResponse = await fetch(reposUrl);
         const reposData = await reposResponse.json();
-        const repoCard = document.createElement("div");
-        repoCard.className = "repo-card";
+       
         repositoriesContainer.innerHTML = "";
+        
         reposData.forEach((repo)=>{
+         const repoCard = document.createElement("div");
+         repoCard.className = "repo-card";
          const repoName = document.createElement("h3");
+         const repoDescription=document.createElement("p");
+         const repoLanguage = document.createElement("span");
          repoName.textContent=repo.name;
+         repoDescription.textContent = repo.description || "No description available";
          repoCard.appendChild(repoName);
+         repoCard.appendChild(repoDescription);
+         repoLanguage.textContent = repo.language || "Language not specified";
+         repoCard.appendChild(repoLanguage);
          repositoriesContainer.appendChild(repoCard);
         });
         console.log(reposData);
