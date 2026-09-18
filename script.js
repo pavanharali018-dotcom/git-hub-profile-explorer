@@ -14,6 +14,7 @@ const repositoriesContainer=document.querySelector("#repositories-container");
 loadingMessage.style.display = "none";
 
 searchForm.addEventListener("submit",(event)=>{
+ 
  event.preventDefault();
  const username =usernameInput.value.trim();
  if(username.length===0){
@@ -37,7 +38,7 @@ searchForm.addEventListener("submit",(event)=>{
         errorMessage.style.display = "none";
         profileContainer.style.display="block";
         const data = await gitusername.json();
-        //todays push
+        
         profileName.innerText=data.name;
         profileAvatar.src=data.avatar_url;
         profileBio.innerText=data.bio||"No bio available";
@@ -48,7 +49,16 @@ searchForm.addEventListener("submit",(event)=>{
         searchButton.disabled = false;
         const reposResponse = await fetch(reposUrl);
         const reposData = await reposResponse.json();
+        const repoCard = document.createElement("div");
+        repoCard.className = "repo-card";
+        reposData.forEach((repo)=>{
+         const repoName = document.createElement("h3");
+         repoName.textContent=repo.name;
+         repoCard.appendChild(repoName);
+         repositoriesContainer.appendChild(repoCard);
+        });
         console.log(reposData);
+        let repo=reposData[0];
      }
      catch(error){
         loadingMessage.style.display = "none";
@@ -58,6 +68,7 @@ searchForm.addEventListener("submit",(event)=>{
         searchButton.disabled = false;
        
      }
+     
      
   }
   
