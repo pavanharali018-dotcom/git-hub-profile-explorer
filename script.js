@@ -64,6 +64,12 @@ searchForm.addEventListener("submit",(event)=>{
          repoCard.appendChild(repoDescription);
          repoLanguage.textContent = repo.language || "Language not specified";
          repoCard.appendChild(repoLanguage);
+         const repoLink = document.createElement("a");
+         repoLink.textContent = "View Repository";
+         repoLink.href = repo.html_url; 
+         repoLink.target = "_blank";
+
+         repoCard.appendChild(repoLink);
          repositoriesContainer.appendChild(repoCard);
         });
         console.log(reposData);
