@@ -51,6 +51,7 @@ searchForm.addEventListener("submit",(event)=>{
         const reposData = await reposResponse.json();
         const repoCard = document.createElement("div");
         repoCard.className = "repo-card";
+        repositoriesContainer.innerHTML = "";
         reposData.forEach((repo)=>{
          const repoName = document.createElement("h3");
          repoName.textContent=repo.name;
@@ -74,7 +75,8 @@ searchForm.addEventListener("submit",(event)=>{
   
   loadingMessage.style.display = "block";
   getusername();
+  
   const reposUrl= `https://api.github.com/users/${username}/repos`;
 
 });
-
+ 
