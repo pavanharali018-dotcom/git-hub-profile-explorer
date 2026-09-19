@@ -51,8 +51,13 @@ searchForm.addEventListener("submit",(event)=>{
         const reposData = await reposResponse.json();
        
         repositoriesContainer.innerHTML = "";
-        
-        reposData.forEach((repo)=>{
+        if(reposData.length===0){
+             repositoriesContainer.innerHTML = "No public repositories found!";
+         }
+
+         else{
+           reposData.forEach((repo)=>{
+         
          const repoCard = document.createElement("div");
          repoCard.className = "repo-card";
          const repoName = document.createElement("h3");
@@ -69,14 +74,16 @@ searchForm.addEventListener("submit",(event)=>{
          repoLink.href = repo.html_url; 
          repoLink.target = "_blank";
          repoCard.appendChild(repoLink);
-         repositoriesContainer.appendChild(repoCard);
          const repoStars = document.createElement("span");
          repoStars.textContent="⭐"+repo.stargazers_count;
          const repoForks = document.createElement("span");
          repoForks.textContent="🍴"+repo.forks_count;
          repoCard.appendChild(repoForks);
          repoCard.appendChild(repoStars);
+         repositoriesContainer.appendChild(repoCard);
         });
+         }
+        
         console.log(reposData);
         let repo=reposData[0];
      }
