@@ -68,9 +68,11 @@ searchForm.addEventListener("submit",(event)=>{
          repoLink.textContent = "View Repository";
          repoLink.href = repo.html_url; 
          repoLink.target = "_blank";
-
          repoCard.appendChild(repoLink);
          repositoriesContainer.appendChild(repoCard);
+         const repoStars = document.createElement("span");
+         repoStars.textContent="⭐"+repo.stargazers_count;
+         repoCard.appendChild(repoStars);
         });
         console.log(reposData);
         let repo=reposData[0];
