@@ -42,3 +42,12 @@ github-profile-explorer/
     ├── repositories.png
     ├── error-message.png
     └── mobile-view.png
+
+
+
+## 📸 Screenshots
+
+1. Profile Search             ![GitHub Profile Explorer](screenshots/profile-search.png)
+2. Repository Cards           ![GitHub Profile Explorer](screenshots/repositories.png)
+3. Error Handling             ![GitHub Profile Explorer](screenshots/error-message.png)
+4. Responsive Mobile View     ![GitHub Profile Explorer](screenshots/mobile-view.png)
