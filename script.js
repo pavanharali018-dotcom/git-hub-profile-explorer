@@ -72,6 +72,9 @@ searchForm.addEventListener("submit",(event)=>{
          repositoriesContainer.appendChild(repoCard);
          const repoStars = document.createElement("span");
          repoStars.textContent="⭐"+repo.stargazers_count;
+         const repoForks = document.createElement("span");
+         repoForks.textContent="🍴"+repo.forks_count;
+         repoCard.appendChild(repoForks);
          repoCard.appendChild(repoStars);
         });
         console.log(reposData);
