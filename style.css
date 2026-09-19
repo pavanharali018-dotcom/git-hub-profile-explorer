@@ -132,3 +132,11 @@ body{
         box-sizing: border-box;
     }
 }
+.repo-card{
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
