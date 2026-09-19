@@ -30,14 +30,14 @@ A simple and responsive web application that allows users to search for GitHub p
 
 ## 📂 Project Structure
 
-github-profile-explorer/
+github-profile-explorer
 │
 ├── index.html
 ├── style.css
 ├── script.js
 ├── README.md
 │
-└── screenshots/
+└── screenshots
     ├── profile-search.png
     ├── repositories.png
     ├── error-message.png
